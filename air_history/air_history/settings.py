@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for jd project
+# Scrapy settings for air_history project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'jd'
+BOT_NAME = 'air_history'
 
-SPIDER_MODULES = ['jd.spiders']
-NEWSPIDER_MODULE = 'jd.spiders'
+SPIDER_MODULES = ['air_history.spiders']
+NEWSPIDER_MODULE = 'air_history.spiders'
 
-
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'jd (+http://www.yourdomain.com)'
+#USER_AGENT = 'air_history (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,14 +47,14 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'jd.middlewares.JdSpiderMiddleware': 543,
+#    'air_history.middlewares.AirHistorySpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'jd.middlewares.JdDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   'air_history.middlewares.AreaSpiderMiddleware': 543,
+}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -64,9 +64,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'jd.pipelines.JdPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'air_history.pipelines.AirHistoryPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

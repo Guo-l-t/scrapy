@@ -8,3 +8,9 @@
     settings.py 负责对整个爬虫的配置。
     spiders目录 负责存放继承自scrapy的爬虫类。
     scrapy.cfg scrapy基础配置
+    
+ https://www.cnblogs.com/zengsf/p/10050414.html
+ https://blog.csdn.net/zhusongziye/article/details/80342781
+ https://blog.csdn.net/weixin_42350948/article/details/82593409
+ https://cloud.tencent.com/developer/article/1351665
+ https://movie.douban.com/tag/#/?sort=T&range=0,10&tags=%E5%8A%B1%E5%BF%97

@@ -9,8 +9,10 @@ headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/2010010
                'Connection': 'close',
                'Referer': 'http://www.baidu.com/link?url=_andhfsjjjKRgEWkj7i9cFmYYGsisrnm2A-TN3XZDQXxvGsM9k9ZZSnikW2Yds4s&amp;amp;wd=&amp;amp;eqid=c3435a7d00006bd600000003582bfd1f'
                }
+
+
 driver = webdriver.Firefox()
-driver.get(r'http://admin.playapper.com:8080/jinrizhuan/sys/index')
+driver.get(r'http://web.wsaso.com:8081/sys/index')
 
 
 def login():
@@ -24,7 +26,8 @@ def addJiek():
     # driver.find_element_by_xpath('//*[@id="menu"]/div[6]/div[1]/div[1]').click()
     # driver.find_element_by_xpath('//*[@id="161110"]').click()
     # driver.find_element_by_link_text('接口添加').click()
-    driver.get('http://admin.playapper.com:8080/jinrizhuan/abutment/add')
+    driver.get('http://web.wsaso.com:8081/abutment/add')
+
 
 
 def addquery(check):
